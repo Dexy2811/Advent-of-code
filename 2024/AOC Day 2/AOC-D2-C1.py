@@ -70,19 +70,22 @@ for i in l:
     num=tuple(int(j) for j in i)
     l2.append(num)
 
-print(l2[:5])
+#print(l2[:5])
 ###########################
 
-test_list=[(1,2,3),(6,5,4),(9,5,7),(1,2,3),(6,5,4),(9,5,7),(1,2,3),(6,5,4),(9,5,7)]
+test_list=[(1,2,3,4),(6,5,4),(9,5,7,5,7),(1,2,3),(6,5,4),(9,5,7,5,6),(1,2,3),(6,5,4,3,2),(9,5,7)]
 ################################
 
-# test=SafetyCheck(l2)
-# lists=test.indifferences()
-# print(lists)
-# dec_inc_check=test.dec_inc(lists)
-# print(dec_inc_check)
-# dist_chec=test.safe_dist(lists)
-# #print(dist_chec)
-# CHECK=test.double_check(dec_inc_check,dist_chec)
-# print(CHECK)
+test=SafetyCheck(test_list)
+lists=test.indifferences()
+print(lists)
+print()
+dec_inc_check=test.dec_inc(lists)
+print(dec_inc_check)
+print()
+dist_chec=test.safe_dist(lists)
+#print(dist_chec)
+print()
+CHECK=test.double_check(dec_inc_check,dist_chec)
+print(CHECK)
 
